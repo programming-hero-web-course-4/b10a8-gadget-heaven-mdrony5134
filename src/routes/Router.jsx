@@ -5,6 +5,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import App from "../App";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import SingleProductDetails from "../components/SingleProductDetails/SingleProductDetails";
+import Statics from "../components/Statics/Statics";
 
 const Router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const Router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/statics",
+        element: <Statics />,
       },
       {
         path: "*",

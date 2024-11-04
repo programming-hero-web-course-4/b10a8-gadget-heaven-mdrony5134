@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { FaRegStar } from "react-icons/fa";
+import { FaRegHeart, FaRegStar } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { TiStarFullOutline } from "react-icons/ti";
 import { useParams } from "react-router-dom";
+import { useProduct } from "../Context/CartContext";
+import { toast } from "react-toastify";
 
 const SingleProductDetails = () => {
   const [singleProduct, setSingleProduct] = useState();
+  const [isInWishList, setInWishList] = useState(false);
   const { product_id } = useParams();
   //   console.log(product_id);
 
@@ -22,6 +25,25 @@ const SingleProductDetails = () => {
     };
     loadProductData();
   }, [product_id]);
+
+  // add to cart
+  const { dispatch } = useProduct();
+  const handleAddToCart = (product) => {
+    dispatch({ type: "ADD_PRODUCET", payload: product });
+    toast.success("Product added to cart successfully", {
+      position: "top-center",
+    });
+  };
+
+  // add wishlist funtionality
+  const handleToWishList = (product) => {
+    dispatch({ type: "ADD_WISHLIST", payload: product });
+    setInWishList(true);
+    toast.success("Product added to wishlist successfully", {
+      position: "top-center",
+    });
+  };
+
   return (
     <div>
       <div className="bg-[#9538E2] pt-8 pb-[230px]">
@@ -37,7 +59,7 @@ const SingleProductDetails = () => {
         <div className="flex gap-8">
           {singleProduct && (
             <>
-              <div>
+              <div key={singleProduct.product_id}>
                 <img
                   className="w-[425px]"
                   src={singleProduct.product_image}
@@ -61,8 +83,8 @@ const SingleProductDetails = () => {
                   Specification:
                 </h2>
                 <ol className="list-decimal ml-5">
-                  {singleProduct.specifications.map((product) => (
-                    <li className="text-[18px] text-[#09080F99]">
+                  {singleProduct.specifications.map((product, index) => (
+                    <li key={index} className="text-[18px] text-[#09080F99]">
                       {product.value} {product.key}
                     </li>
                   ))}
@@ -80,9 +102,21 @@ const SingleProductDetails = () => {
                     {singleProduct.rating}
                   </span>
                 </p>
-                <button className="bg-[#9538E2] text-white px-[22px] py-[11px] text-[18px] font-bold shadow-md rounded-[32px] flex items-center gap-1 mt-7">
-                  Add To Cart <IoCartOutline />
-                </button>
+                <div className="flex items-center gap-8">
+                  <button
+                    onClick={() => handleAddToCart(singleProduct)}
+                    className="bg-[#9538E2] text-white px-[22px] py-[11px] text-[18px] font-bold shadow-md rounded-[32px] flex items-center gap-1 mt-7"
+                  >
+                    Add To Cart <IoCartOutline />
+                  </button>
+                  <button
+                    disabled={isInWishList}
+                    onClick={() => handleToWishList(singleProduct)}
+                    className={`bg-[#9538E2] text-white px-[22px] py-[11px] text-[18px] font-bold shadow-md rounded-[32px] flex items-center gap-1 mt-7 ${isInWishList ? "opacity-40 cursor-not-allowed":""}`}
+                  >
+                    Add To WishList <FaRegHeart />
+                  </button>
+                </div>
               </div>
             </>
           )}
