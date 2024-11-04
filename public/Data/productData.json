@@ -1,0 +1,186 @@
+[
+  {
+    "product_id": "LP001",
+    "product_title": "Acer Aspire 5",
+    "product_image": "/productImage/laccer.webp",
+    "category": "laptop",
+    "price": 549.99,
+    "description": "Acer Aspire 5 with a 15.6-inch display, Intel Core i5, 8GB RAM, and 512GB SSD.",
+    "specifications": [
+      { "key": "Processor", "value": "Intel Core i5" },
+      { "key": "RAM", "value": "8GB" },
+      { "key": "Storage", "value": "512GB SSD" },
+      { "key": "Display", "value": "15.6 inches" }
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "LP002",
+    "product_title": "Dell XPS 13",
+    "product_image": "/productImage/ldell.webp",
+    "category": "laptop",
+    "price": 999.99,
+    "description": "Dell XPS 13 with an ultra-thin design, 13.3-inch 4K display, and Intel Core i7.",
+    "specifications": [
+      { "key": "Processor", "value": "Intel Core i7" },
+      { "key": "RAM", "value": "16GB" },
+      { "key": "Storage", "value": "1TB SSD" },
+      { "key": "Display", "value": "13.3 inches 4K" }
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "LP003",
+    "product_title": "HP Pavilion 15",
+    "product_image": "/productImage/lhp.webp",
+    "category": "laptop",
+    "price": 629.99,
+    "description": "HP Pavilion 15 with a 15.6-inch FHD display, AMD Ryzen 5, and 512GB SSD.",
+    "specifications": [
+      { "key": "Processor", "value": "AMD Ryzen 5" },
+      { "key": "RAM", "value": "8GB" },
+      { "key": "Storage", "value": "512GB SSD" },
+      { "key": "Display", "value": "15.6 inches FHD" }
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "LP004",
+    "product_title": "Lenovo ThinkPad X1",
+    "product_image": "/productImage/llenovo.jpg",
+    "category": "laptop",
+    "price": 1199.99,
+    "description": "Lenovo ThinkPad X1 with a 14-inch display, Intel Core i7, and 16GB RAM.",
+    "specifications": [
+      { "key": "Processor", "value": "Intel Core i7" },
+      { "key": "RAM", "value": "16GB" },
+      { "key": "Storage", "value": "512GB SSD" },
+      { "key": "Display", "value": "14 inches" }
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "LP005",
+    "product_title": "Asus ZenBook 14",
+    "product_image": "/productImage/lassus.jpg",
+    "category": "laptop",
+    "price": 749.99,
+    "description": "Asus ZenBook 14 with a lightweight design, Intel Core i5, and 8GB RAM.",
+    "specifications": [
+      { "key": "Processor", "value": "Intel Core i5" },
+      { "key": "RAM", "value": "8GB" },
+      { "key": "Storage", "value": "256GB SSD" },
+      { "key": "Display", "value": "14 inches" }
+    ],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": "LP006",
+    "product_title": "Microsoft Surface Laptop 4",
+    "product_image": "/productImage/lmicrosoft.avif",
+    "category": "laptop",
+    "price": 1299.99,
+    "description": "Microsoft Surface Laptop 4 with a 13.5-inch display, Intel Core i5, and 8GB RAM.",
+    "specifications": [
+      { "key": "Processor", "value": "Intel Core i5" },
+      { "key": "RAM", "value": "8GB" },
+      { "key": "Storage", "value": "512GB SSD" },
+      { "key": "Display", "value": "13.5 inches" }
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "PH001",
+    "product_title": "Samsung Galaxy S21",
+    "product_image": "/productImage/pgalaxy.jpg",
+    "category": "phone",
+    "price": 799.99,
+    "description": "Samsung Galaxy S21 with a 6.2-inch display, 128GB storage, and triple camera setup.",
+    "specifications": [
+      { "key": "Display", "value": "6.2 inches" },
+      { "key": "Storage", "value": "128GB" },
+      { "key": "Camera", "value": "Triple Camera" }
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "PH002",
+    "product_title": "iPhone 13",
+    "product_image": "/productImage/pi13.jpg",
+    "category": "phone",
+    "price": 999.99,
+    "description": "iPhone 13 with a 6.1-inch display, A15 Bionic chip, and dual-camera system.",
+    "specifications": [
+      { "key": "Display", "value": "6.1 inches" },
+      { "key": "Storage", "value": "128GB" },
+      { "key": "Chip", "value": "A15 Bionic" }
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "PH003",
+    "product_title": "Google Pixel 6",
+    "product_image": "/productImage/ppixel.jpg",
+    "category": "phone",
+    "price": 599.99,
+    "description": "Google Pixel 6 with a 6.4-inch display, Google Tensor chip, and dual-camera system.",
+    "specifications": [
+      { "key": "Display", "value": "6.4 inches" },
+      { "key": "Storage", "value": "128GB" },
+      { "key": "Chip", "value": "Google Tensor" }
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "PH004",
+    "product_title": "OnePlus 9",
+    "product_image": "/productImage/poneplus.png",
+    "category": "phone",
+    "price": 729.99,
+    "description": "OnePlus 9 with a 6.55-inch display, Snapdragon 888, and Hasselblad camera.",
+    "specifications": [
+      { "key": "Display", "value": "6.55 inches" },
+      { "key": "Storage", "value": "128GB" },
+      { "key": "Chip", "value": "Snapdragon 888" }
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "AC001",
+    "product_title": "Apple AirPods Pro",
+    "product_image": "/productImage/aearpod.jpg",
+    "category": "accessory",
+    "price": 249.99,
+    "description": "Apple AirPods Pro with active noise cancellation and a customizable fit.",
+    "specifications": [
+      { "key": "Noise Cancellation", "value": "Active" },
+      { "key": "Battery Life", "value": "4.5 hours" }
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "AC002",
+    "product_title": "Samsung Galaxy Buds Live",
+    "product_image": "/productImage/aburds.jpg",
+    "category": "accessory",
+    "price": 169.99,
+    "description": "Samsung Galaxy Buds Live with a unique design and great sound quality.",
+    "specifications": [
+      { "key": "Design", "value": "Bean shape" },
+      { "key": "Battery Life", "value": "8 hours" }
+    ],
+    "availability": true,
+    "rating": 4.4
+  }
+]

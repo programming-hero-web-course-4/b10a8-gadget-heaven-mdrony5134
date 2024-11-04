@@ -2,7 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="max-w-7xl mx-auto mt-[100px]">
+    <div className="bg-white">
+       <div className="max-w-7xl mx-auto pt-[100px] pb-10">
       <div className="text-center border-b border-[#09080F1A] pb-2">
         <h2 className="text-[32px] font-bold">Gadget Heaven</h2>
         <p className="text-[#09080F99]">
@@ -30,6 +31,7 @@ const Footer = () => {
           <p className="text-[#09080F99] mb-1">Cookie Policy</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
