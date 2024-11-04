@@ -1,20 +1,21 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
-import Banner from "../Banner/Banner";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  const isProductDetailsPage = location.pathname.includes("/product-details")
   return (
-    <div className="bg-[#9538E2]">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between py-7 text-[#FFFFFF]">
+    <div className={`${isProductDetailsPage ? "bg-white text-black" : "bg-[#9538E2] text-white"}`}>
+      <nav className="max-w-7xl mx-auto flex items-center justify-between py-7">
         <div>
-          <h1 className="text-[20px] font-bold">Gadget Haven</h1>
+          <Link to="/" className="text-[20px] font-bold">Gadget Haven</Link>
         </div>
         <div className="flex items-center gap-12 font-medium">
-          <NavLink>Home</NavLink>
-          <NavLink>Statics</NavLink>
-          <NavLink>Dashboard</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/statics">Statics</NavLink>
+          <NavLink to="/dashboard">Dashboard</NavLink>
         </div>
         <div className="flex items-center gap-4 text-black">
           <div className="w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center">

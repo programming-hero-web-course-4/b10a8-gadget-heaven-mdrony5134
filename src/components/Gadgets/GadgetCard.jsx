@@ -1,7 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const GadgetCard = ({ product }) => {
-  const { product_image, product_title, price } = product;
+  const { product_image, product_title, price, product_id} = product;
+  const navigate = useNavigate()
+  const handleViewAll = (product_id) =>{
+    navigate(`/product-details/${product_id}`)
+  }
   return (
     <div className="bg-[#FFFFFF] w-[322px] rounded-2xl p-6">
       <div className="w-[280px] rounded-xl">
@@ -17,7 +22,7 @@ const GadgetCard = ({ product }) => {
       <p className="text-[#09080F99] font-medium text-[20px]">
         Price: ${price}
       </p>
-      <button className="border border-[#9538E2] px-5 py-2 text-[#9538E2] text[18px] font-semibold rounded-[32px] mt-2 hover:bg-[#9538E2] hover:text-white">
+      <button onClick={()=>handleViewAll(product_id)} className="border border-[#9538E2] px-5 py-2 text-[#9538E2] text[18px] font-semibold rounded-[32px] mt-2 hover:bg-[#9538E2] hover:text-white">
         View all
       </button>
     </div>
