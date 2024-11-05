@@ -11,6 +11,8 @@ const Dashboard = () => {
   const [isActive, setIsActive] = useState("cart");
   const [sortedProduct, setSortedProduct] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [purchaseTotalPrice, setPurchaseTotalPrice] = useState(0);
+  const [isPurchase, setIsPurchase] = useState(false)
 
   // total price calculate
   const totalPrice = state.cartItems.reduce(
@@ -18,8 +20,6 @@ const Dashboard = () => {
     0
   );
 
-  //price before empty
-  const priceBeforeEmpty = totalPrice;
 
   // sort desending order
   const handleSortByPrice = () => {
@@ -36,9 +36,10 @@ const Dashboard = () => {
   // purchase functionality
 
   const handlePurchase = () => {
+    setPurchaseTotalPrice(totalPrice);
     setIsModalOpen(true);
+    setIsPurchase(true)
     dispatch({ type: "EMPTY_CART" });
-    return priceBeforeEmpty;
   };
 
   return (
@@ -96,8 +97,9 @@ const Dashboard = () => {
                     Sort By Price <TbSortDescending2 />
                   </button>
                   <button
+                    disabled={isPurchase}
                     onClick={handlePurchase}
-                    className="py-3 px-5 bg-[#9538E2] rounded-[32px] text-[18px] font-semibold text-white"
+                    className={`py-3 px-5  rounded-[32px] text-[18px] font-semibold text-white ${isPurchase? "bg-[#9538E2] bg-opacity-50 cursor-not-allowed":"bg-[#9538E2]"}`}
                   >
                     Purchase
                   </button>
@@ -152,7 +154,7 @@ const Dashboard = () => {
       {/* modal open */}
       {isModalOpen && (
         <Purchase
-        priceBeforeEmpty={priceBeforeEmpty}
+          purchaseTotalPrice={purchaseTotalPrice}
           onClose={() => setIsModalOpen(false)}
         />
       )}

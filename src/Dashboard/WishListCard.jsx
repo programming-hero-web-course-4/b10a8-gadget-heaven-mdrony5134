@@ -4,6 +4,10 @@ import { useProduct } from "../components/Context/CartContext";
 import { toast } from "react-toastify";
 
 const WishListCard = ({ product }) => {
+  const { product_image, product_title, description, price, product_id } =
+    product;
+
+    // again add product funtionality
   const { dispatch } = useProduct();
   const handleAddToCart = (product) => {
     dispatch({ type: "ADD_PRODUCET", payload: product });
@@ -11,7 +15,11 @@ const WishListCard = ({ product }) => {
       position: "top-center",
     });
   };
-  const { product_image, product_title, description, price } = product;
+
+  // remove wishlist funtionality
+  const handleRemoveWishList = (product_id) => {
+    dispatch({ type: "REMOVE_WISHLIST", payload: product_id });
+  };
   return (
     <div className="bg-white rounded-2xl shadow-sm overflow-hidden p-6 mb-5">
       <div className="flex gap-8">
@@ -33,7 +41,10 @@ const WishListCard = ({ product }) => {
             Add To Cart
           </button>
         </div>
-        <button className="flex items-center justify-center ml-40">
+        <button
+          onClick={() => handleRemoveWishList(product_id)}
+          className="flex items-center justify-center ml-40"
+        >
           <IoIosCloseCircleOutline className="text-[40px] text-red-500" />
         </button>
       </div>

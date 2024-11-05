@@ -27,21 +27,42 @@ const SingleProductDetails = () => {
   }, [product_id]);
 
   // add to cart
-  const { dispatch } = useProduct();
+  const { state, dispatch } = useProduct();
   const handleAddToCart = (product) => {
-    dispatch({ type: "ADD_PRODUCET", payload: product });
-    toast.success("Product added to cart successfully", {
-      position: "top-center",
-    });
+    const isProductInCart = state.cartItems.find(
+      (product) => product.product_id === product_id
+    );
+    if (!isProductInCart) {
+      dispatch({ type: "ADD_PRODUCET", payload: product });
+      toast.dismiss();
+      toast.success("Product added to cart successfully", {
+        position: "top-center",
+      });
+    } else {
+      toast("Opps! This product is already added", {
+        position: "top-center",
+        type: "error",
+      });
+    }
   };
+  // add one product not multiple
+  useEffect(() => {
+    if (
+      state.wishListItems.find((product) => product.product_id === product_id)
+    ) {
+      setInWishList(true);
+    }
+  }, []);
 
   // add wishlist funtionality
   const handleToWishList = (product) => {
-    dispatch({ type: "ADD_WISHLIST", payload: product });
-    setInWishList(true);
-    toast.success("Product added to wishlist successfully", {
-      position: "top-center",
-    });
+    if (!isInWishList) {
+      dispatch({ type: "ADD_WISHLIST", payload: product });
+      setInWishList(true);
+      toast.success("Product added to wishlist successfully", {
+        position: "top-center",
+      });
+    }
   };
 
   return (
@@ -112,7 +133,9 @@ const SingleProductDetails = () => {
                   <button
                     disabled={isInWishList}
                     onClick={() => handleToWishList(singleProduct)}
-                    className={`bg-[#9538E2] text-white px-[22px] py-[11px] text-[18px] font-bold shadow-md rounded-[32px] flex items-center gap-1 mt-7 ${isInWishList ? "opacity-40 cursor-not-allowed":""}`}
+                    className={`bg-[#9538E2] text-white px-[22px] py-[11px] text-[18px] font-bold shadow-md rounded-[32px] flex items-center gap-1 mt-7 ${
+                      isInWishList ? "opacity-40 cursor-not-allowed" : ""
+                    }`}
                   >
                     Add To WishList <FaRegHeart />
                   </button>
