@@ -4,6 +4,7 @@ import CartProduct from "./CartProduct";
 import WishListCard from "./WishListCard";
 import { TbSortDescending2 } from "react-icons/tb";
 import Purchase from "../components/Purchase/Purchase";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const { state, dispatch } = useProduct();
@@ -42,6 +43,9 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Gadget Haven - dasboard</title>
+      </Helmet>
       <div className="bg-[#9538E2] pt-8 pb-8">
         <h1 className="text-[32px] font-bold text-white text-center">
           Dashboard
