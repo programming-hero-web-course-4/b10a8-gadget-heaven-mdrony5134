@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../Layouts/Layout";
 import Home from "../pages/HomePage/Home";
-import Dashboard from "../pages/Dashboard/Dashboard";
 import App from "../App";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import SingleProductDetails from "../components/SingleProductDetails/SingleProductDetails";
 import Statics from "../components/Statics/Statics";
+import Dashboard from "../Dashboard/Dashboard";
+import SingUp from "../pages/SingUp/SingUp";
 
 const Router = createBrowserRouter([
   {
@@ -24,9 +24,13 @@ const Router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard />,
       },
+      // {
+      //   path: "/statics",
+      //   element: <Statics />,
+      // },
       {
-        path: "/statics",
-        element: <Statics />,
+        path: "/singup",
+        element: <SingUp />,
       },
       {
         path: "*",

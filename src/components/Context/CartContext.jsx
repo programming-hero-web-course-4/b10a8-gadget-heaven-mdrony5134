@@ -12,6 +12,7 @@ const initialState = {
 // type
 const ADD_PRODUCET = "ADD_PRODUCET";
 const ADD_WISHLIST = "ADD_WISHLIST";
+const EMPTY_CART = "EMPTY_CART";
 
 // reducer
 const cartReducer = (state, action) => {
@@ -23,6 +24,8 @@ const cartReducer = (state, action) => {
         ...state,
         wishListItems: [...state.wishListItems, action.payload],
       };
+    case EMPTY_CART:
+      return { ...state, cartItems: [] };
 
     default:
       return state;

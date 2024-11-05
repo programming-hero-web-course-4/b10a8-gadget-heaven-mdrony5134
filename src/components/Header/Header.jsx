@@ -7,7 +7,7 @@ import { useProduct } from "../Context/CartContext";
 const Header = () => {
   const { state } = useProduct();
   const location = useLocation();
-  const loacationPath = ["/product-details", "/dashboard", "/statics"];
+  const loacationPath = ["/product-details", "/dashboard", "/statics", "/singup"];
   const isProductDetailsPage = loacationPath.some((path) =>
     location.pathname.includes(path)
   );
@@ -35,6 +35,7 @@ const Header = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/statics">Statics</NavLink>
           <NavLink to="/dashboard">Dashboard</NavLink>
+          <NavLink to="/singup">SingUp</NavLink>
         </div>
         <div className="flex items-center gap-8 text-black">
           <div
