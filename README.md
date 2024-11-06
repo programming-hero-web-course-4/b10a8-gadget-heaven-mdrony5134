@@ -1,4 +1,5 @@
-# Gadget-Haven Ecommerce Website ![gadgets](https://github.com/user-attachments/assets/816ab616-6e61-4cb2-a577-4c9ea20ec518)
+# Gadget-Haven Ecommerce Website ![favicon](https://github.com/user-attachments/assets/b1056d08-2ff0-4a80-83cd-d3a375e9b0f5)
+
 
  Welcome to Gadget Haven!👋
  This project showcases a variety of gadgets with features such as product listing , charts, a shopping cart and a wishlist all designed for smooth user experience.
