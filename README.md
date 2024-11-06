@@ -12,7 +12,7 @@
 
 ## Requirment Document
  
- Access the requirement document: [Requirment Document](file:///D:/PH-10/milestone-8/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf)
+ Access the requirement document: [Requirment Document](https://heyzine.com/flip-book/92f26a6c80.html)
 
  ## 📚 Key React Concepts Used
 
