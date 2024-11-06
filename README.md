@@ -1,4 +1,4 @@
-# Gadget-Haven Ecommerce Website
+# Gadget-Haven Ecommerce Website ![gadgets](https://github.com/user-attachments/assets/816ab616-6e61-4cb2-a577-4c9ea20ec518)
 
  Welcome to Gadget Haven!👋
  This project showcases a variety of gadgets with features such as product listing , charts, a shopping cart and a wishlist all designed for smooth user experience.
@@ -7,11 +7,11 @@
 
  ## 🔗 Live Website
  
- Live demo: (https://gadget-haven-web.netlify.app/)
+ Live demo: https://gadget-haven-web.netlify.app/
 
 ## Requirment Document
  
- Access the requirement document: (file:///D:/PH-10/milestone-8/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf)
+ Access the requirement document: [Requirment Document](file:///D:/PH-10/milestone-8/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf)
 
  ## 📚 Key React Concepts Used
 
