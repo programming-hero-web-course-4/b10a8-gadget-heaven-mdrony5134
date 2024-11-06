@@ -18,9 +18,13 @@
  This project utilize several core React conecpts to create a structured and dynamic user experience. Below is a list of some fundamental features used:
 
  1. **Components**: Modularized UI using functional components to create resusable and maintainable code.
+
  2. **React Router**: Implemented to navigate different pages (home, statics, dashboard, about us and singup).
+
  3. **Conditional Rendering**: Used to render component based on user interaction and state(e.g, differ style based on active route)
+
  4. **Event Handling**: Attach events to elements (like button) to allow user with the add to cart and wishlist.
+ 
  5. **State Mangement with Context API**: Utilized for global state management of the cart and wishlist, ensuring seamless data flow across components.
 
  -------------------------------
@@ -29,7 +33,7 @@
 
   For managing data , the project leverages:
 
-  -**Context API**: Used for managing the shopping cart and wishlist across the application, providing a global state accessible from any component.
+  - **Context API**: Used for managing the shopping cart and wishlist across the application, providing a global state accessible from any component.
 
  -------------------------------
 
