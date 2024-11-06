@@ -28,7 +28,7 @@ const Gadgets = () => {
   }, [selectedCategory, allProduct]);
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mt-[550px]">
       <div>
         <h1 className="text-[#0B0B0B] font-bold text-[42px] text-center mb-12">
           Explore Cutting-Edge Gadgets

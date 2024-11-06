@@ -6,6 +6,7 @@ import SingleProductDetails from "../components/SingleProductDetails/SingleProdu
 import Statics from "../components/Statics/Statics";
 import Dashboard from "../Dashboard/Dashboard";
 import SingUp from "../pages/SingUp/SingUp";
+import About from "../components/About/About";
 
 const Router = createBrowserRouter([
   {
@@ -24,10 +25,14 @@ const Router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard />,
       },
-      // {
-      //   path: "/statics",
-      //   element: <Statics />,
-      // },
+      {
+        path: "/statics",
+        element: <Statics />,
+      },
+      {
+        path: "/about-us",
+        element: <About />,
+      },
       {
         path: "/singup",
         element: <SingUp />,

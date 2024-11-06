@@ -6,7 +6,7 @@ const Banner = () => {
     <>
       <div className="bg-[#9538E2] pb-[268px]">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-[56px] font-bold text-[#FFFFFF] leading-[72px]">
+          <h1 className="text-[56px] font-bold text-[#FFFFFF] leading-[72px] pt-5">
             Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories
           </h1>
           <p className="text-[#FFFFFF] mt-4 mb-8">

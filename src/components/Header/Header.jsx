@@ -7,7 +7,13 @@ import { useProduct } from "../Context/CartContext";
 const Header = () => {
   const { state } = useProduct();
   const location = useLocation();
-  const loacationPath = ["/product-details", "/dashboard", "/statics", "/singup"];
+  const loacationPath = [
+    "/product-details",
+    "/dashboard",
+    "/statics",
+    "/about-us",
+    "/singup",
+  ];
   const isProductDetailsPage = loacationPath.some((path) =>
     location.pathname.includes(path)
   );
@@ -27,15 +33,74 @@ const Header = () => {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between py-7">
         <div>
-          <Link to="/" className="text-[20px] font-bold">
+          <Link
+            to="/"
+            className={`text-[20px] font-bold ${
+              isProductDetailsPage && "text-[#9538E2]"
+            }`}
+          >
             Gadget Haven
           </Link>
         </div>
         <div className="flex items-center gap-12 font-medium">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/statics">Statics</NavLink>
-          <NavLink to="/dashboard">Dashboard</NavLink>
-          <NavLink to="/singup">SingUp</NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "bg-gray-500 px-2 py-1 text-white rounded-lg"
+                : "text-black"
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              location.pathname === "/"
+                ? "text-white"
+                : isActive
+                ? "text-[#9538E2]"
+                : "text-black"
+            }
+            to="/statics"
+          >
+            Statics
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              location.pathname === "/"
+                ? "text-white"
+                : isActive
+                ? "text-[#9538E2]"
+                : "text-black"
+            }
+            to="/dashboard"
+          >
+            Dashboard
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              location.pathname === "/"
+                ? "text-white"
+                : isActive
+                ? "text-[#9538E2]"
+                : "text-black"
+            }
+            to="/about-us"
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              location.pathname === "/"
+                ? "text-white"
+                : isActive
+                ? "text-[#9538E2]"
+                : "text-black"
+            }
+            to="/singup"
+          >
+            SingUp
+          </NavLink>
         </div>
         <div className="flex items-center gap-8 text-black">
           <div

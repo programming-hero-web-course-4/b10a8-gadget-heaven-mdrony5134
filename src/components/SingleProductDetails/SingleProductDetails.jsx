@@ -5,6 +5,7 @@ import { TiStarFullOutline } from "react-icons/ti";
 import { useParams } from "react-router-dom";
 import { useProduct } from "../Context/CartContext";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const SingleProductDetails = () => {
   const [singleProduct, setSingleProduct] = useState();
@@ -67,6 +68,9 @@ const SingleProductDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Gadget Haven - product-details</title>
+      </Helmet>
       <div className="bg-[#9538E2] pt-8 pb-[230px]">
         <h1 className="text-[32px] font-bold text-white text-center">
           Product Details

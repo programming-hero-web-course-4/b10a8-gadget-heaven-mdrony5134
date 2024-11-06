@@ -99,7 +99,7 @@ const Dashboard = () => {
                   <button
                     disabled={isPurchase}
                     onClick={handlePurchase}
-                    className={`py-3 px-5  rounded-[32px] text-[18px] font-semibold text-white ${isPurchase? "bg-[#9538E2] bg-opacity-50 cursor-not-allowed":"bg-[#9538E2]"}`}
+                    className={`py-3 px-5  rounded-[32px] text-[18px] font-semibold text-white hover:bg-white hover:text-[#9538E2] ${isPurchase? "bg-[#9538E2] bg-opacity-50 cursor-not-allowed":"bg-[#9538E2]"}`}
                   >
                     Purchase
                   </button>

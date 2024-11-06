@@ -14,10 +14,10 @@ const SingUp = () => {
               src="/images/gadgets.png"
               className="w-20 mx-auto"
             />
-            <h2 className="text-center font-bold text-teal-500 text-[18px]">Gadget Haven</h2>
+            <h2 className="text-center font-bold text-[#9538E2] text-[18px]">Gadget Haven</h2>
           </div>
           <div className="mt-12 flex flex-col items-center">
-            <h1 className="text-2xl xl:text-3xl font-extrabold">Sign up</h1>
+            <h1 className="text-2xl xl:text-3xl font-extrabold text-[#9538E2]">Sign up</h1>
             <div className="w-full flex-1 mt-8">
               <div className="flex flex-col items-center">
                 <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
@@ -74,7 +74,7 @@ const SingUp = () => {
                   type="password"
                   placeholder="Password"
                 />
-                <button className="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                <button className="mt-5 tracking-wide font-semibold bg-[#9538E2] text-gray-100 w-full py-4 rounded-lg hover:bg-[#8312e0] transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                   <svg
                     className="w-6 h-6 -ml-2"
                     fill="none"
